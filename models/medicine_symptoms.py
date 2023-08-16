@@ -6,5 +6,3 @@ class MedicineSymptoms(models.Model):
 
 
     name_of_symptoms=fields.Char(string="Name_of_symptoms")
-
-    

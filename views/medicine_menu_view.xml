@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <menuitem id="medicine_menu_root" name="Medicine_Management_System">
+
+        <menuitem id="medicine_first_level_menu" name="Medicine" >
+            <menuitem id="medicine_model_menu_action" action="medicine_model_action" name="Medicine_Type"/>
+        </menuitem>
+
+    </menuitem>
+    
+</odoo>

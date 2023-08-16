@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id="form_property" model="ir.ui.view">
+        <field name="name">medicine.offer.form</field>
+        <field name="model">medicine.offer</field>
+        <field name="arch" type="xml">
+            <form string="Tests">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="price" />
+                        </group>
+
+                        <group>
+                            <field name="name_of_customer" />
+                        </group>
+
+                        <group>
+                            <field name="validity" />
+                        </group>
+
+                        <group>
+                            <field name="date_deadline" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="estate_property_offer" model="ir.ui.view">
+        <field name="name">medicine.offer.tree</field>
+        <field name="model">medicine.offer</field>
+        <field name="arch" type="xml">
+            <tree string="Channel">
+                <field name="price" />
+                <field name="name_of_customer" />
+                <field name="validity" />
+                <field  name="date_deadline" />
+
+                <!-- <button name="action_confirm"  type="object" icon="fa-check"/>
+                <button name="action_cancel"  type="object" icon="fa-times"/> -->
+
+                <field name="status" />
+            </tree>
+        </field>
+    </record> 
+
+</odoo>

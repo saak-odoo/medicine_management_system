@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id="form_property" model="ir.ui.view">
+        <field name="name">medicine.block.form</field>
+        <field name="model">medicine.block</field>
+        <field name="arch" type="xml">
+            <form string="Tests">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name_of_block" />
+                        </group>
+
+                        <group>
+                            <field name="name_of_block_element" />
+                        </group>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="estate_property_offer" model="ir.ui.view">
+        <field name="name">medicine.block.tree</field>
+        <field name="model">medicine.block</field>
+        <field name="arch" type="xml">
+            <tree string="Channel">
+                <field name="name_of_block" />
+                <field name="name_of_block_element" />
+            </tree>
+        </field>
+    </record> 
+
+</odoo>

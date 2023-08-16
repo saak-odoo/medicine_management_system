@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id="form_property" model="ir.ui.view">
+        <field name="name">medicine.symptoms.form</field>
+        <field name="model">medicine.symptoms</field>
+        <field name="arch" type="xml">
+            <form string="Tests">
+                <sheet>
+                    <group>
+
+                        <group>
+                            <field name="name_of_symptoms" />
+                        </group>
+                        
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="estate_property_offer" model="ir.ui.view">
+        <field name="name">medicine.symptoms.tree</field>
+        <field name="model">medicine.symptoms</field>
+        <field name="arch" type="xml">
+            <tree string="Channel" editable="bottom">
+                <field name="name_of_symptoms" />
+            </tree>
+        </field>
+    </record> 
+
+</odoo>

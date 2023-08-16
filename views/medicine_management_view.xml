@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <!-- for list view -->
+
+    <record id="estate_property" model="ir.ui.view">
+        <field name="name">medicine.management.tree</field>
+        <field name="model">medicine.management</field>
+        <field name="arch" type="xml">
+            <tree string="Channel">
+                <field name="name_of_medicine"/>
+                <field name="expire_date" />
+                <field name="composition_of_medicine"/>
+                <field name="total_medicine"  options="{'color_field': 'color'}"  />
+                <field name="sold_out_medicine" options="{'color_field': 'color'}"/>
+                <field name="available_medicine" options="{'color_field': 'color'}" />
+                <field name="selling_price"/>
+                <field optional="hidden" name="best_price"/>
+            </tree>
+        </field>
+    </record> 
+
+
+    <!-- for form view -->
+
+    <record id="test" model="ir.ui.view">
+        <field name="name">Medicine</field>
+        <field name="model">medicine.management</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <group>
+
+                        <group>
+                            <field name="name_of_medicine" />
+                        </group>
+
+                        <group>
+                            <field name="expire_date"  options="{'color_field': 'color'}"  />
+                            <!-- widget="many2many_tags" -->
+                        </group>
+                        
+                        <group>
+                            <field name="selling_price" />
+                        </group>
+
+                        <group>
+                            <field name="best_price" />
+                        </group>
+
+                    </group>
+                    
+                    <notebook>
+
+                        <page string="Description">
+
+
+                            <group>
+
+                                <group>
+                                    <field name="total_medicine" />
+                                </group>
+
+                                <group>
+                                    <field name="sold_out_medicine" />
+                                </group>
+
+                                <group>
+                                    <field name="available_medicine" />
+                                </group>
+                                
+                                <group>
+                                    <field name="composition_of_medicine" />
+                                </group>
+
+
+                            </group>
+
+                        </page>
+                        
+                        <page string="Other_info">
+
+                            <group>
+                                <group>
+                                    <field name="seller" />
+                                </group>
+                                
+                                <group>
+                                    <field name="buyer" />
+                                </group>
+                            </group>
+
+                        </page>
+
+                        <page string="Offer">
+                            <field name="offer_ids" />        
+                        </page>
+
+                        <page string="Symptoms">
+                            <field name="symptoms_ids" />        
+                        </page>
+
+                        <page string="Block">
+                            <field name="block_id" />        
+                        </page>
+
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- for search view -->
+
+
+    <record id="school_student_search" model="ir.ui.view">
+        <field name="name">medicine.management.search</field>
+        <field name="model">medicine.management</field>
+        <field name="arch" type="xml">
+            <search>
+
+                <field name="name_of_medicine"/>
+                <field name="expire_date" />
+                <field name="composition_of_medicine"/>
+                <field name="total_medicine"  options="{'color_field': 'color'}"  />
+                <field name="sold_out_medicine" options="{'color_field': 'color'}"/>
+                <field name="available_medicine" options="{'color_field': 'color'}" />
+                <field name="selling_price"/>
+                <field optional="hidden" name="best_price"/>
+                
+
+            </search>
+        </field>
+    </record>
+
+
+</odoo>
