@@ -9,9 +9,9 @@
     'depends': ['base'],
 
 
-    # 'data': [
-    #     'security/ir.model.access.csv',
-    # ],
+    'data': [
+        'security/ir.model.access.csv',
+    ],
 
 
     # "demo": [
