@@ -14,8 +14,8 @@
         'views/medicine_menu_list_view.xml',
         'views/medicine_menu_view.xml',
         'views/medicine_management_view.xml',
-        'views/medicine_symptoms-view.xml',
         'views/medicine_offer_view.xml',
+        'views/medicine_symptoms-view.xml',
         'views/medicine_block_view.xml',
     ],
 

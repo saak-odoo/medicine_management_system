@@ -7,4 +7,24 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record id="medicine_offer_model_action" model="ir.actions.act_window">
+        <field name="name">Offer_type</field>
+        <field name="res_model">medicine.offer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="medicine_symptoms_model_action" model="ir.actions.act_window">
+        <field name="name">Symptoms_type</field>
+        <field name="res_model">medicine.symptoms</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="medicine_block_model_action" model="ir.actions.act_window">
+        <field name="name">Block_type</field>
+        <field name="res_model">medicine.block</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
 </odoo>

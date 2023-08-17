@@ -6,6 +6,12 @@
 
         <menuitem id="medicine_first_level_menu" name="Medicine" >
             <menuitem id="medicine_model_menu_action" action="medicine_model_action" name="Medicine_Type"/>
+            <menuitem id="medicine_offer_model_menu_action" action="medicine_offer_model_action" name="offer_Type"/>
+            <menuitem id="medicine_symptoms_model_menu_action" action="medicine_symptoms_model_action" name="Symptoms_Type"/>
+        </menuitem>
+
+        <menuitem id="medicine_second_level_menu" name="Block" >
+            <menuitem id="medicine_block_model_menu_action" action="medicine_block_model_action" name="Blocks_Type"/>
         </menuitem>
 
     </menuitem>

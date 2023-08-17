@@ -39,7 +39,6 @@
 
                         <group>
                             <field name="expire_date"  options="{'color_field': 'color'}"  />
-                            <!-- widget="many2many_tags" -->
                         </group>
                         
                         <group>
@@ -95,16 +94,18 @@
                         </page>
 
                         <page string="Offer">
-                            <field name="offer_ids" />        
+                            <field name="offer_price_ids" />        
                         </page>
+                        
+                        
 
                         <page string="Symptoms">
-                            <field name="symptoms_ids" />        
+                            <field name="symptoms_ids" />    
                         </page>
 
                         <page string="Block">
-                            <field name="block_id" />        
-                        </page>
+                            <field name="block_id" />   
+                        </page> 
 
                     </notebook>
                 </sheet>

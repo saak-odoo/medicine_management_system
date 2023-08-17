@@ -2,15 +2,15 @@
 
 <odoo>
 
-    <record id="form_property" model="ir.ui.view">
-        <field name="name">medicine.block.form</field>
+    <record id="medicine_block_form" model="ir.ui.view">
+        <field name="name">form</field>
         <field name="model">medicine.block</field>
         <field name="arch" type="xml">
             <form string="Tests">
                 <sheet>
                     <group>
                         <group>
-                            <field name="name_of_block" />
+                            <field name="name_of_block"  options="{'no_create': True, 'no_create_edit':True}"/>
                         </group>
 
                         <group>
@@ -25,7 +25,7 @@
 
 
 
-    <record id="estate_property_offer" model="ir.ui.view">
+    <record id="medicine_block_tree" model="ir.ui.view">
         <field name="name">medicine.block.tree</field>
         <field name="model">medicine.block</field>
         <field name="arch" type="xml">

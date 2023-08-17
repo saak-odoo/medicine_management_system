@@ -2,7 +2,7 @@
 
 <odoo>
 
-    <record id="form_property" model="ir.ui.view">
+    <record id="medicine_symptoms_form" model="ir.ui.view">
         <field name="name">medicine.symptoms.form</field>
         <field name="model">medicine.symptoms</field>
         <field name="arch" type="xml">
@@ -22,7 +22,7 @@
 
 
 
-    <record id="estate_property_offer" model="ir.ui.view">
+    <record id="medicine_symptoms_tree" model="ir.ui.view">
         <field name="name">medicine.symptoms.tree</field>
         <field name="model">medicine.symptoms</field>
         <field name="arch" type="xml">
