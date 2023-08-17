@@ -3,6 +3,7 @@ from odoo import models,fields
 class MedicineSymptoms(models.Model):
     _name="medicine.symptoms"
     _description="medicine distributed according to symptoms"
+    _order="name_of_symptoms asc"
     _rec_name="name_of_symptoms"
 
 

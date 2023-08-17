@@ -3,6 +3,7 @@ from odoo import models,fields
 class MedicineBlock(models.Model):
     _name="medicine.block"
     _description="for managing the medicine according to block"
+    _order="name_of_block asc"
     _rec_name = 'name_of_block'
 
     name_of_block=fields.Selection(
@@ -12,3 +13,6 @@ class MedicineBlock(models.Model):
         )
 
     name_of_block_element=fields.Char(string="Name_of_block_element")
+
+
+    
