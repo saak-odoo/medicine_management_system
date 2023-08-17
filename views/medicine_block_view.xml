@@ -23,8 +23,6 @@
         </field>
     </record>
 
-
-
     <record id="medicine_block_tree" model="ir.ui.view">
         <field name="name">medicine.block.tree</field>
         <field name="model">medicine.block</field>
