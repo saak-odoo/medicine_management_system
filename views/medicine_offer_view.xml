@@ -44,7 +44,7 @@
         <field name="model">medicine.offer</field>
         <field name="arch" type="xml">
 
-            <tree string="Channel">
+            <tree string="Channel" decoration-success="status=='accepted'" decoration-danger="status=='rejected'" editable="bottom">
 
                 <field name="price" />
                 <field name="name_of_customer" />
@@ -56,7 +56,6 @@
                 <button name="action_cancel"  type="object" icon="fa-times"/>
 
                 <field name="status" />
-
         
             </tree>
 

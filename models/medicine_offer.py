@@ -54,6 +54,6 @@ class MedicineOffer(models.Model):
 
 
     _sql_constraints = [
-        ('check_price', 'CHECK(price >= 0 AND price <= 100)',
+        ('check_price', 'CHECK(price >= 0)',
             'The Price must be Positive.'),
     ]

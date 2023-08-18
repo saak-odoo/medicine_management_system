@@ -9,6 +9,7 @@
         <field name="model">medicine.management</field>
         <field name="arch" type="xml">
             <tree string="Channel">
+
                 <field name="name_of_medicine"/>
                 <field name="expire_date" />
                 <field name="composition_of_medicine"/>
@@ -16,11 +17,11 @@
                 <field name="sold_out_medicine" options="{'color_field': 'color'}"/>
                 <field name="available_medicine" options="{'color_field': 'color'}" />
                 <field name="selling_price"/>
-                <field optional="hidden" name="best_price"/>
+                <field name="best_price"/>
+
             </tree>
         </field>
     </record> 
-
 
     <!-- for form view -->
 
@@ -31,7 +32,6 @@
             <form>
                 <header>
                     <button name="action_For_Sold" type="object" string="Sold" class="oe_highlight" attrs="{'invisible': [('state', 'in', ('Offer_received','canceled','sold'))]}"/>
-                    <!-- <button name="action_For_Sold" type="object" string="Sold" attrs="{'invisible': [('state', 'in', ('Offer_accepted','sold','canceled'))]}" /> -->
                     
                     <button name="action_For_Cancel" type="object" string="Cancel"  attrs="{'invisible': [('state', 'in', ('canceled','sold'))]}"/>
                     <field name="state"  widget="statusbar"  statusbar_visible="new,Offer_received,Offer_accepted,canceled,sold"/>
@@ -122,6 +122,7 @@
                             <field name="symptoms_ids" />    
                         </page>
 
+
                         <page string="Block">
                             <field name="block_id" />   
                         </page> 
@@ -147,7 +148,7 @@
                 <field name="sold_out_medicine" options="{'color_field': 'color'}"/>
                 <field name="available_medicine" options="{'color_field': 'color'}" />
                 <field name="selling_price"/>
-                <field optional="hidden" name="best_price"/>
+                <field  name="best_price"/>
                 
             </search>
         </field>
