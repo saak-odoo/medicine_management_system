@@ -10,7 +10,4 @@ class MedicineSymptoms(models.Model):
     name_of_symptoms=fields.Char(string="Name_of_symptoms")
 
 
-    # _sql_constraints = [
-    #     ('name_of_medicine_unique', 'unique(name_of_medicine)',
-    #     'Field name_of_medicine must be unique')
-    # ]
+   

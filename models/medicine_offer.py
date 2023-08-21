@@ -26,7 +26,6 @@ class MedicineOffer(models.Model):
     
 
 
-    # Adding the condition using  constraints
 
 
     @api.depends("customer_id.state")
@@ -39,10 +38,7 @@ class MedicineOffer(models.Model):
                 i.state="Offer_accepted"
                 i.buyer=val[0]['display_name']
                 i.seller="Aman Kumar Sah"
-        
-
-                
-
+    
 
     @api.depends("customer_id.state")
     def action_cancel(self):
@@ -51,7 +47,6 @@ class MedicineOffer(models.Model):
             for i in record.customer_id:
                 i.state="canceled"
                 
-
 
     _sql_constraints = [
         ('check_price', 'CHECK(price >= 0)',

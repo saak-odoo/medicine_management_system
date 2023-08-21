@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<odoo>
+
+   <record id="inherit_model" model="ir.ui.view">
+        <field name="name">inherit model</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form" />
+
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='preferences']" position="after">
+                <page string="Description">
+                    <field name="medicine_type_ids" />
+                </page>
+            </xpath>
+        </field>
+
+   </record>
+
+</odoo>
+
+
+
+
+<!-- <odoo>
+    <record id="medicine_model" model="ir.ui.view">
+        <fields name="name">medicine_inherit</fields>
+        <fields name="model">res.users</fields>
+        <fields name="inherit_id" ref="base.base.view_users_form" />
+
+        <fields name="arch" type="xml">
+            <xpath expr="//page[@name='preferences']" position="after">
+                <page string="description">
+                    <fields name="medicine_type_ids"/>
+                </page>
+            </xpath>
+        </fields>
+
+    </record>
+</odoo> -->

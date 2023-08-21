@@ -17,6 +17,7 @@
         'views/medicine_offer_view.xml',
         'views/medicine_symptoms-view.xml',
         'views/medicine_block_view.xml',
+        'views/medicine_inherit_view.xml',
     ],
 
 }

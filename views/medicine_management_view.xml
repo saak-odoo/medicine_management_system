@@ -30,12 +30,14 @@
         <field name="model">medicine.management</field>
         <field name="arch" type="xml">
             <form>
+
                 <header>
                     <button name="action_For_Sold" type="object" string="Sold" class="oe_highlight" attrs="{'invisible': [('state', 'in', ('Offer_received','canceled','sold'))]}"/>
-                    
+
                     <button name="action_For_Cancel" type="object" string="Cancel"  attrs="{'invisible': [('state', 'in', ('canceled','sold'))]}"/>
                     <field name="state"  widget="statusbar"  statusbar_visible="new,Offer_received,Offer_accepted,canceled,sold"/>
                 </header>
+                
                 <sheet>
 
                     <group>

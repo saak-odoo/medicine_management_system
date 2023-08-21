@@ -20,10 +20,10 @@ class MedicineManagement(models.Model):
 
     seller=fields.Char(string="Seller")
 
+    sellesperson_id=fields.Many2one("res.user",string="SellesMan")
+
     buyer=fields.Char(string="Buyer")
-
-
-    # Adding delivery charge for the home delivery
+    
 
     delivery=fields.Boolean(string="Delivery")
 
@@ -32,12 +32,11 @@ class MedicineManagement(models.Model):
     distance=fields.Integer(string="Distance shop-location(km)")
 
 
-    # Adding color for specific field
 
     color=fields.Integer()
 
 
-    # Adding field for the offer accepted or not
+   
 
     offer=[
         ('new','New'),
@@ -49,7 +48,7 @@ class MedicineManagement(models.Model):
 
     state=fields.Selection(selection=offer,string="Status",default='new')
 
-    # adding field for the medicien available or not
+   
 
     total_medicine=fields.Integer(string="Total_Medicine",required=True)
 
@@ -58,7 +57,7 @@ class MedicineManagement(models.Model):
     available_medicine=fields.Integer(string="Available_Medicine",readonly=True,compute="_compute_available")
 
 
-    # relation beetween the models
+   
 
 
     symptoms_ids=fields.Many2many("medicine.symptoms",string="Symptoms")
@@ -68,7 +67,6 @@ class MedicineManagement(models.Model):
     offer_price_ids=fields.One2many("medicine.offer","customer_id",string="offer")
 
 
-#    Adding compute for cal of total_medicine,sold_out_medicine,available_medicine
 
     @api.depends("sold_out_medicine","total_medicine")
     def _compute_available(self):
@@ -77,18 +75,19 @@ class MedicineManagement(models.Model):
             if val<0:
                 record.sold_out_medicine=''
                 record.available_medicine=record.total_medicine
-                # raise ValidationError("You have not enough Stock")
             else:
                 record.available_medicine=val
     
 
-    @api.depends("offer_price_ids")
+
+    @api.depends("offer_price_ids.price")
     def _compute_best_price(self):
         val=0
         for record in self:
             for i in record.offer_price_ids:
                 val=max(val,i.price)
-        record.best_price=val
+            record.best_price=val
+
 
 
     @api.depends("distance")
@@ -97,7 +96,6 @@ class MedicineManagement(models.Model):
             record.delivery_charge=record.distance*50
 
 
-    # Action on button
 
     def action_For_Sold(self):
         for record in self:
@@ -130,7 +128,7 @@ class MedicineManagement(models.Model):
                 record.selling_price=record.best_price+record.delivery_charge
 
 
-    # Adding sql constraints
+
 
     _sql_constraints = [
         ('check_selling_price', 'CHECK(selling_price >= 0 )',
@@ -150,13 +148,14 @@ class MedicineManagement(models.Model):
     ]
 
 
+
     _sql_constraints = [
         ('name_of_medicine_unique', 'unique(name_of_medicine)',
         'Field name_of_medicine must be unique')
     ]
 
 
-    # Adding python constraints on sold_out_medicine
+
 
     @api.constrains("sold_out_medicine")
     def sold_medicine(self):
@@ -165,5 +164,9 @@ class MedicineManagement(models.Model):
             if val<2:
                 raise ValidationError("You must purchase atleast 2 medicine or more")
 
+    @api.model
+    def create(self,vals):
+        for record in self:
+            record.state="offer_accepted"
+        return super().create(vals)
 
-    
