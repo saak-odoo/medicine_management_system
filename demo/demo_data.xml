@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id="id1" model="medicine.management">
+
+        <field name="name_of_medicine">Megapin</field>
+        <field name="expire_date">2023-02-10</field>
+        <field name="composition_of_medicine">hcl</field>
+        <field name="selling_price">12345</field>
+        <field name="best_price">100</field>
+        <field name="seller">1.00</field>
+        <field name="delivery">True</field>
+        <field name="delivery_charge">40</field>
+        <field name="state">Offer_accepted</field>
+        <field name="total_medicine">100</field>
+        <field name="sold_out_medicine">20</field>
+
+    </record>
+
+
+    <record id="id2" model="medicine.management">
+
+        <field name="name_of_medicine">Pantop-d</field>
+        <field name="expire_date">2023-02-10</field>
+        <field name="composition_of_medicine">Na</field>
+        <field name="selling_price">12345</field>
+        <field name="best_price">300</field>
+        <field name="seller">1.00</field>
+        <field name="delivery">True</field>
+        <field name="delivery_charge">40</field>
+        <field name="state">canceled</field>
+        <field name="total_medicine">100</field>
+        <field name="sold_out_medicine">20</field>
+
+    </record>
+
+    <record id="id3" model="medicine.management">
+
+        <field name="name_of_medicine">Sefarn</field>
+        <field name="expire_date">2023-02-10</field>
+        <field name="composition_of_medicine">cu</field>
+        <field name="selling_price">12345</field>
+        <field name="best_price">300</field>
+        <field name="seller">1.00</field>
+        <field name="delivery">True</field>
+        <field name="delivery_charge">40</field>
+        <field name="state">Offer_accepted</field>
+        <field name="total_medicine">100</field>
+        <field name="sold_out_medicine">20</field>
+
+    </record>
+
+
+    <record id="id4" model="medicine.management">
+
+        <field name="name_of_medicine">Drotin</field>
+        <field name="expire_date">2023-02-10</field>
+        <field name="composition_of_medicine">co2</field>
+        <field name="selling_price">12345</field>
+        <field name="best_price">300</field>
+        <field name="seller">1.00</field>
+        <field name="delivery">True</field>
+        <field name="delivery_charge">40</field>
+        <field name="state">canceled</field>
+        <field name="total_medicine">100</field>
+        <field name="sold_out_medicine">20</field>
+
+    </record>
+
+    <record id="id5" model="medicine.management">
+
+        <field name="name_of_medicine">sumo</field>
+        <field name="expire_date">2023-02-10</field>
+        <field name="composition_of_medicine">O2</field>
+        <field name="selling_price">12345</field>
+        <field name="best_price">300</field>
+        <field name="seller">1.00</field>
+        <field name="delivery">True</field>
+        <field name="delivery_charge">40</field>
+        <field name="state">Offer_accepted</field>
+        <field name="total_medicine">100</field>
+        <field name="sold_out_medicine">20</field>
+
+    </record>
+
+
+
+    <record id="id6" model="medicine.management">
+
+        <field name="name_of_medicine">Montina-l</field>
+        <field name="expire_date">2023-02-10</field>
+        <field name="composition_of_medicine">Alcohol</field>
+        <field name="selling_price">12345</field>
+        <field name="best_price">300</field>
+        <field name="seller">1.00</field>
+        <field name="delivery">True</field>
+        <field name="delivery_charge">40</field>
+        <field name="state">canceled</field>
+        <field name="total_medicine">100</field>
+        <field name="sold_out_medicine">20</field>
+
+    </record>
+
+    <record id="id7" model="medicine.management">
+
+        <field name="name_of_medicine">Sefron</field>
+        <field name="expire_date">2023-02-10</field>
+        <field name="composition_of_medicine">Acid and Base</field>
+        <field name="selling_price">12345</field>
+        <field name="best_price">300</field>
+        <field name="seller">1.00</field>
+        <field name="delivery">True</field>
+        <field name="delivery_charge">40</field>
+        <field name="state">Offer_accepted</field>
+        <field name="total_medicine">100</field>
+        <field name="sold_out_medicine">20</field>
+
+    </record>
+
+</odoo>
+  

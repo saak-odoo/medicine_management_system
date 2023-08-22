@@ -115,10 +115,10 @@
                         </page>
 
                         <page string="Offer">
-                            <field name="offer_price_ids" />        
+                            <field name="offer_price_ids" attrs="{'readonly':[('state','=','Offer_accepted')]}" />        
                         </page>
                         
-                        
+                        z
 
                         <page string="Symptoms">
                             <field name="symptoms_ids" />    

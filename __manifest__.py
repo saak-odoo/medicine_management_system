@@ -20,6 +20,10 @@
         'views/medicine_inherit_view.xml',
     ],
 
+    "demo": [
+        "demo/demo_data.xml",
+    ]
+
 }
 
 

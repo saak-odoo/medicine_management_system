@@ -32,11 +32,7 @@ class MedicineManagement(models.Model):
     distance=fields.Integer(string="Distance shop-location(km)")
 
 
-
     color=fields.Integer()
-
-
-   
 
     offer=[
         ('new','New'),
@@ -56,17 +52,11 @@ class MedicineManagement(models.Model):
 
     available_medicine=fields.Integer(string="Available_Medicine",readonly=True,compute="_compute_available")
 
-
-   
-
-
     symptoms_ids=fields.Many2many("medicine.symptoms",string="Symptoms")
 
     block_id=fields.Many2one("medicine.block",string="Blocks")
 
     offer_price_ids=fields.One2many("medicine.offer","customer_id",string="offer")
-
-
 
     @api.depends("sold_out_medicine","total_medicine")
     def _compute_available(self):
@@ -155,8 +145,6 @@ class MedicineManagement(models.Model):
     ]
 
 
-
-
     @api.constrains("sold_out_medicine")
     def sold_medicine(self):
         for record in self:
@@ -167,6 +155,6 @@ class MedicineManagement(models.Model):
     @api.model
     def create(self,vals):
         for record in self:
-            record.state="offer_accepted"
+            record.state="Offer_received"
         return super().create(vals)
-
+    
