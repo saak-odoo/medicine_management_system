@@ -1,4 +1,6 @@
 from odoo import models,fields,api
+from odoo.exceptions import ValidationError
+from odoo.tools import float_compare
 
 class MedicineOffer(models.Model):
     _name="medicine.offer"
@@ -52,3 +54,20 @@ class MedicineOffer(models.Model):
         ('check_price', 'CHECK(price >= 0)',
             'The Price must be Positive.'),
     ]
+
+
+    @api.model
+    def create(self, vals):
+        if vals.get("customer_id") and vals.get("price"):
+            prop = self.env["medicine.management"].browse(vals["customer_id"])
+
+            # We check if the offer is higher than the existing offers
+
+            if prop.offer_ids:
+                max_offer = max(prop.mapped("offer_ids.price"))
+                if float_compare(vals["price"], max_offer, precision_rounding=0.01) <= 0:
+                    raise ValidationError("The offer must be higher than %.2f" % max_offer)
+            prop.state = "Offer_received"
+
+        return super().create(vals)
+    
