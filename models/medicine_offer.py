@@ -1,6 +1,8 @@
-from odoo import models,fields,api
+from odoo import models
 from odoo.exceptions import ValidationError
 from odoo.tools import float_compare
+from odoo import fields
+from odoo import api
 
 class MedicineOffer(models.Model):
     _name="medicine.offer"
@@ -21,14 +23,9 @@ class MedicineOffer(models.Model):
 
     status=fields.Selection(selection=[('accepted','Accepted'),('rejected','Rejected')],string="Status")
 
-
     validity=fields.Integer(default=7,string="Validity")
 
     date_deadline=fields.Date(string="Date_deadline")
-    
-
-
-
 
     @api.depends("customer_id.state")
     def action_confirm(self):
@@ -49,12 +46,10 @@ class MedicineOffer(models.Model):
             for i in record.customer_id:
                 i.state="canceled"
                 
-
     _sql_constraints = [
         ('check_price', 'CHECK(price >= 0)',
             'The Price must be Positive.'),
     ]
-
 
     @api.model
     def create(self, vals):
@@ -70,4 +65,3 @@ class MedicineOffer(models.Model):
             prop.state = "Offer_received"
 
         return super().create(vals)
-    

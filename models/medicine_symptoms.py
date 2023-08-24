@@ -1,4 +1,5 @@
-from odoo import models,fields
+from odoo import models
+from odoo import fields
 
 class MedicineSymptoms(models.Model):
     _name="medicine.symptoms"
@@ -9,4 +10,3 @@ class MedicineSymptoms(models.Model):
 
     name_of_symptoms=fields.Char(string="Name_of_symptoms")
 
-    

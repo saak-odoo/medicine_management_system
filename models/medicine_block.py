@@ -1,4 +1,5 @@
-from odoo import models,fields
+from odoo import models
+from odoo import fields
 
 class MedicineBlock(models.Model):
     _name="medicine.block"
