@@ -7,6 +7,5 @@ class MedicineSymptoms(models.Model):
     _order="name_of_symptoms asc"
     _rec_name="name_of_symptoms"
 
-
     name_of_symptoms=fields.Char(string="Name_of_symptoms")
 

@@ -19,9 +19,8 @@
             </form>
         </field>
     </record>
-
-
-
+    
+    
     <record id="medicine_symptoms_tree" model="ir.ui.view">
         <field name="name">medicine.symptoms.tree</field>
         <field name="model">medicine.symptoms</field>
