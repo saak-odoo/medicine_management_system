@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="inerited_view" model="ir.ui.views">
+        <fields name="name">res.user.name</fields>
+        <fields name="model">res.user</fields>
+        <fields name="arch"></fields>
+    </record>
+</odoo>
