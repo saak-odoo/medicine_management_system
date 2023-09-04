@@ -6,7 +6,7 @@
     'website': "https://www.odoo.com",
     'category': 'medicine management/System',
     'version': '1.0',
-    'depends': ['base'],
+    'depends': ['base','mail'],
 
 
     'data': [

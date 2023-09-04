@@ -9,6 +9,7 @@ class MedicineManagement(models.Model):
     _description="For managing the medicine"
     _order="name_of_medicine asc"
     _rec_name = 'name_of_medicine'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name_of_medicine=fields.Char(sting="Name_of_medicine",required=True)
     
